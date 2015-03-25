@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1427252983 source:c:\users\destroy the time\desktop\c\practica2_eddavl\arbolavl.c
+	"arbolAVL.h"
+
+1427304316 source:c:\users\destroy the time\desktop\c\practica2_eddavl\main.c
+	<stdio.h>
+	<stdlib.h>
+	"arbolAVL.h"
+
+1427249368 c:\users\destroy the time\desktop\c\practica2_eddavl\arbolavl.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
