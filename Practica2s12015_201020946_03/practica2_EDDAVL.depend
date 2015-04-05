@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1428203875 source:c:\users\destroy the time\desktop\c\practica2_eddavl\arbolavl.c
+	"arbolAVL.h"
+
+1428203780 source:c:\users\destroy the time\desktop\c\practica2_eddavl\main.c
+	<stdio.h>
+	<stdlib.h>
+	"arbolAVL.h"
+	"ListaSimple.h"
+	<time.h>
+
+1428203725 c:\users\destroy the time\desktop\c\practica2_eddavl\arbolavl.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1428110031 source:c:\users\destroy the time\desktop\c\practica2_eddavl\listasimple.c
+	"ListaSimple.h"
+
+1428110666 c:\users\destroy the time\desktop\c\practica2_eddavl\listasimple.h
+	<stdio.h>
+	<stdlib.h>
+
