@@ -278,6 +278,13 @@ void graficoTiempoInsercion(double valorX, double valorY) /*valor en x es Tiempo
 
 }
 
+void graphInsercion(double valorX, double valorY)
+{
+    II= fopen("C:/Users/Destroy the time/Desktop/C/practica2_EDDAVL/insercion.txt","a+");
+    fprintf(II,"%lf     %lf title 'insercion Arbol' \n", valorX, valorY);
+    fclose(II);
+}
+
 void graficoTiempoRecorrido(double valorX, double valorY)
 {
     int i;
@@ -314,9 +321,9 @@ void graficoTiempoBurbuja(double valorX, double valorY)
 }
 void graficoTiempoQuicksort(double valorX, double valorY)
 {
-    BB= fopen("C:/Users/Destroy the time/Desktop/C/practica2_EDDAVL/quicksort.txt","a+");
-    fprintf(BB,"set xlabel 'Tiempo (s)'\nset ylabel 'No. Nodos'\nset xrange[-%lf:%lf]\nset yrange[-%lf:%lf]\n plot log10(x) /log10(2) title 'Ordenación Quicksort O(nlog2n)'", valorX,valorX, valorY,valorY, valorY);
-    fclose(BB);
+    QQ= fopen("C:/Users/Destroy the time/Desktop/C/practica2_EDDAVL/quicksort.txt","a+");
+    fprintf(QQ,"set xlabel 'Tiempo (s)'\nset ylabel 'No. Nodos'\nset xrange[-%lf:%lf]\nset yrange[-%lf:%lf]\n plot x*(log10(x) /log10(2)) title 'Ordenación Quicksort O(nlog2n)'", valorX,valorX, valorY,valorY, valorY);
+    fclose(QQ);
 }
 
 void graficoMinimoComparaciones(double noNodos)
@@ -356,7 +363,7 @@ void graficoMovimientosMinimos(double noNodos)
 
     total=(2*(noNodos-1));
 
-    char *comandoGnuPlot[]={"set title \"Comparacion Minima\"", "plot 'movMin.temp' with linespoints ls 1 \n"};
+    char *comandoGnuPlot[]={"set title \"Comparacion Minima\"", "plot 'movMin.temp' with linespoint ls 1 \n"};
     double yVal[]={noNodos};
     double xVal[]={total};
 

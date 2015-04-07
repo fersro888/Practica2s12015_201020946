@@ -31,6 +31,7 @@ void rotacionDD(Nodo **n, Nodo *n1);
 void rotacionDI(Nodo **n, Nodo *n1);
 void archivoDOT(Nodo *raiz);
 void graficoTiempoInsercion(double valorX, double valorY);
+void graphInsercion(double valorX, double valorY);
 void graficoTiempoRecorrido(double valorX, double valorY);
 void graficoTiempoBurbuja(double valorX, double valorY);
 void graficoTiempoQuicksort(double valorX, double valorY);
@@ -39,6 +40,8 @@ void graficoMovimientosMinimos(double noNodos);
 void graficoTiempoVRSBurbuja();
 FILE *f;
 FILE *BB;
+FILE *QQ;
+FILE *II;
 
 
 #endif // ARBOLAVL_H_INCLUDED

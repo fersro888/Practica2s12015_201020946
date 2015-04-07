@@ -23,7 +23,7 @@ int main()
 
     //INSERCION DEL ARBOL
     printf("\n INSERCION DEL ARBOL: \n");
-    clock_t inicioInsercionI, inicioInsercionF ;
+    clock_t inicioInsercionI, inicioInsercionF, auxInicioInsercionF ,auxInicioInsercionI;
     inicioInsercionI=clock(); /*Tiempo de inicio de insercion del arbol*/
     f= fopen("C:/Users/Destroy the time/Desktop/C/practica2_EDDAVL/graficaAVL.dot","a+");
     fprintf(f,"%s\n","digraph g{ \nnode [shape=record, height=.1];");
@@ -42,6 +42,9 @@ int main()
         insertarNodo(&raiz, numero, &altura);  /*Creando arbol AVL*/
         insertarLS(&listaInicial, &listaFinal, numero,contadorLista); //crear una lista para ordenamiento Burbuja
         insertarLS(&listaInicialOQ, &listaFinalOQ, numero,contadorLista); //Crear una lista para ordenamiento Quicksort
+        auxInicioInsercionI=clock();
+        graphInsercion(((double)(auxInicioInsercionF)/CLOCKS_PER_SEC), numeroNodos);
+        auxInicioInsercionF=clock();
         numeroNodos++;
         contadorLista++;
     }
