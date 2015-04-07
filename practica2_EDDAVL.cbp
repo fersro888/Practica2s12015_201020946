@@ -31,12 +31,20 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="ListaSimple.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="ListaSimple.h" />
 		<Unit filename="arbolAVL.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="arbolAVL.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="rotacionArbol.c">
+			<Option compilerVar="CC" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Extensions>
 			<code_completion />

@@ -1,0 +1,9 @@
+set xlabel 'Tiempo (s)'
+set ylabel 'No. Nodos'
+set xrange[-6.993000:6.993000]
+set yrange[-2917.000000:2917.000000]
+ plot x**2-2*x+1 title 'O(n^2) Ordenamiento Burbuja'set xlabel 'Tiempo (s)'
+set ylabel 'No. Nodos'
+set xrange[-942.907000:942.907000]
+set yrange[-195090.000000:195090.000000]
+ plot x**2-2*x+1 title 'O(n^2) Ordenamiento Burbuja'

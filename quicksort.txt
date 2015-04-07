@@ -1,0 +1,9 @@
+set xlabel 'Tiempo (s)'
+set ylabel 'No. Nodos'
+set xrange[-7.459000:7.459000]
+set yrange[-2917.000000:2917.000000]
+ plot log10(x) /log10(2) title 'Ordenación Quicksort O(nlog2n)'set xlabel 'Tiempo (s)'
+set ylabel 'No. Nodos'
+set xrange[-965.412000:965.412000]
+set yrange[-195090.000000:195090.000000]
+ plot log10(x) /log10(2) title 'Ordenación Quicksort O(nlog2n)'
