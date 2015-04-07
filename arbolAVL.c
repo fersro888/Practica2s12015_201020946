@@ -285,6 +285,20 @@ void graphInsercion(double valorX, double valorY)
     fclose(II);
 }
 
+void graphBurbuja(double valorX, double valorY)
+{
+    GB=fopen("C:/Users/Destroy the time/Desktop/C/practica2_EDDAVL/graphBurbuja.txt","a+");
+    fprintf(GB,"%lf     %lf title 'ordenamiento Burbuja Arbol' \n", valorX, valorY);
+    fclose(GB);
+}
+
+void graphQuicksort(double valorX, double valorY)
+{
+    GQ=fopen("C:/Users/Destroy the time/Desktop/C/practica2_EDDAVL/graphQuicksort.txt","a+");
+    fprintf(GQ,"%lf     %lf title 'ordenamiento Quicksort Arbol' \n", valorX, valorY);
+    fclose(GQ);
+}
+
 void graficoTiempoRecorrido(double valorX, double valorY)
 {
     int i;
@@ -416,8 +430,13 @@ void qs(int lista[], int izq, int der)
     j=der;
     x= lista[(izq+der)/2];
 
+
         do{
-            while(lista[i] < x && j<=der) {i++;}
+
+            while(lista[i] < x && j<=der)
+            {
+                i++;
+            }
             while(x<lista[j] && j>izq) {j--;}
             if(i <=j)
             {
@@ -431,10 +450,10 @@ void qs(int lista[], int izq, int der)
         if(izq < j)
         {qs(lista, izq, j);}
         if(i < der)
-        {qs(lista, i, der);}
+        {qs(lista, i, der);
+        }
 
 }
-
 void ordenamientoQuicksort(int numeroNodos)
 {
 FILE *archivo;
@@ -443,19 +462,23 @@ FILE *archivo;
  int i,j,k;
  k=0;
  int temp=0;
+ clock_t auxInicioOrdenamientoQuicksortI,auxInicioOrdenamientoQuicksortF;
 
      archivo= fopen("C:/Users/Destroy the time/Desktop/C/practica2_EDDAVL/Datos.txt","r"); //Archivo para leer
 
     if(archivo == NULL)
         exit(1);
 
-
+    auxInicioOrdenamientoQuicksortI=clock();
     while(feof(archivo)==0) //Leer el archivo .txt
     {
         fgets(lectura, 100, archivo);
         int numero=atoi(lectura);
         arreglo[k]=numero; //Guardar los elementos en un arreglo, dependiendo del numero de nodos que entren al arbol
-        k++;
+
+         graphQuicksort((double)((auxInicioOrdenamientoQuicksortF)/CLOCKS_PER_SEC), numero);
+         auxInicioOrdenamientoQuicksortF=clock();
+         k++;
     }
     fclose(archivo);
 
@@ -480,6 +503,7 @@ void ordenamientoBurbuja(int numeroNodos) //Numero de nodos que ingresaron al ar
  int i,j,k;
  k=0;
  int temp=0;
+ clock_t auxInicioOrdenamientoBurbujaI,auxInicioOrdenamientoBurbujaF;
 
      archivo= fopen("C:/Users/Destroy the time/Desktop/C/practica2_EDDAVL/Datos.txt","r"); //Archivo para leer
 
@@ -506,6 +530,9 @@ void ordenamientoBurbuja(int numeroNodos) //Numero de nodos que ingresaron al ar
                    //printf("numero: %d", temp);
                     arreglo[j]=arreglo[j+1];
                     arreglo[j+1]=temp;
+                      auxInicioOrdenamientoBurbujaI=clock();
+                      graphBurbuja((((double)(auxInicioOrdenamientoBurbujaI)/CLOCKS_PER_SEC))*1000, i);
+                      auxInicioOrdenamientoBurbujaF=clock(); //fin del clock en ordenamiento burbuja
                 }
             }
         }

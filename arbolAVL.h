@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 #define NUM_COMMANDSI 2
 #define NUM_COMMANDSR 2
 #define NUM_COMMANDSB 2
@@ -32,6 +33,8 @@ void rotacionDI(Nodo **n, Nodo *n1);
 void archivoDOT(Nodo *raiz);
 void graficoTiempoInsercion(double valorX, double valorY);
 void graphInsercion(double valorX, double valorY);
+void graphBurbuja(double valorX, double valorY);
+void graphQuicksort(double valorX, double valorY);
 void graficoTiempoRecorrido(double valorX, double valorY);
 void graficoTiempoBurbuja(double valorX, double valorY);
 void graficoTiempoQuicksort(double valorX, double valorY);
@@ -42,6 +45,7 @@ FILE *f;
 FILE *BB;
 FILE *QQ;
 FILE *II;
-
+FILE *GB;
+FILE *GQ;
 
 #endif // ARBOLAVL_H_INCLUDED

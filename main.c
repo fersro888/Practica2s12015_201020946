@@ -43,7 +43,7 @@ int main()
         insertarLS(&listaInicial, &listaFinal, numero,contadorLista); //crear una lista para ordenamiento Burbuja
         insertarLS(&listaInicialOQ, &listaFinalOQ, numero,contadorLista); //Crear una lista para ordenamiento Quicksort
         auxInicioInsercionI=clock();
-        graphInsercion(((double)(auxInicioInsercionF)/CLOCKS_PER_SEC), numeroNodos);
+        graphInsercion(((double)(auxInicioInsercionI)/CLOCKS_PER_SEC), numeroNodos);
         auxInicioInsercionF=clock();
         numeroNodos++;
         contadorLista++;
@@ -79,6 +79,7 @@ int main()
     ordenamientoBurbuja(numeroNodos);
     //imprimirLista(&listaInicial);
     inicioOrdenamientoBurbujaF= clock();
+
     printf("\nOrdenamiento Burbuja: %f segundos \n", (double)(inicioOrdenamientoBurbujaF)/CLOCKS_PER_SEC); /*Tiempo final de recorrido*/
     graficoTiempoBurbuja(((double)(inicioOrdenamientoBurbujaF)/CLOCKS_PER_SEC), numeroNodos);
     //---------------------------
